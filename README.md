@@ -1,1 +1,0 @@
-# SpareZone-Desktop_App
