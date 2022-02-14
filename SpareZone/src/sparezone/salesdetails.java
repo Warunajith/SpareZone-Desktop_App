@@ -173,7 +173,7 @@ public class salesdetails extends javax.swing.JFrame {
                 String id=String.valueOf(rs.getInt("id"));
                 String price=String.valueOf(rs.getInt("price"));
                 String quantity=String.valueOf(rs.getInt("s_quantity"));
-                String date=String.valueOf(rs.getInt("date"));
+                String date=String.valueOf(rs.getDate("date"));
                 
                 
                 String tbData[] = {id,price,quantity,date};

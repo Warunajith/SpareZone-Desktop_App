@@ -305,7 +305,7 @@ public class edit extends javax.swing.JFrame {
 
                     query = "INSERT INTO "
                             + "`items`(`id`, `name`, `price`, `des`, `stock`, `code`, `rate`) "
-                            + "VALUES ('" + max + "','" + name + "','" + price + "','" + desc + "','" + stock + "','" + code + "','" + rate + "',')";
+                            + "VALUES ('" + max + "','" + name + "','" + price + "','" + desc + "','" + stock + "','" + code + "','" + rate + "')";
 
                     statement.execute(query);
                     //After creating verify and other pages dispose this
@@ -325,6 +325,7 @@ public class edit extends javax.swing.JFrame {
         // TODO add your handling code here:
         String name = Name.getText().trim();
         String price = Price.getText().trim();
+        Double price1=Double.parseDouble(price);
         String desc = Des.getText().trim();
         String stock = Stock.getText().trim();
         int stock1 = Integer.parseInt(stock);
@@ -351,7 +352,7 @@ public class edit extends javax.swing.JFrame {
              // query=UPDATE `items` SET `name`=name,`price`=price,`des`=desc,`stock`=stock1,`rate`=rate1 WHERE code=code;
              // query=UPDATE items SET ”+ “name='” + name + “‘,price='” + price + “‘,des='” + desc + “‘,stock='” + stock1 + “‘,rate='” + rate1 + “‘”+ “WHERE code='” + code + “‘;
               // query=UPDATE items SET name='" + jTextField2.getText() + "',marks=" + jTextField3.getText() + " WHERE roll=" + jTextField1.getText() + "
-              query="UPDATE items SET name='" + name + "',price='" + price + "',des='" + desc + "',stock='" + stock + "',rate='" + rate + " WHERE code=" + code + "";
+              query="UPDATE items SET name='" + name + "',price=" + price1 + ",des='" + desc + "',stock=" + stock1 + ",rate=" + rate + " WHERE code='" + code + "'";
               statement.execute(query); 
               showMessageDialog(null, "Updated");
                 }else{
@@ -375,14 +376,14 @@ public class edit extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        String name = Name.getText().trim();
+       /* String name = Name.getText().trim();
         String price = Price.getText().trim();
         String desc = Des.getText().trim();
         String stock = Stock.getText().trim();
         int stock1 = Integer.parseInt(stock);
-        String code = Code.getText().trim();
+        */String code = Code.getText().trim();/*
         String rate = Rate.getText().trim();
-        int rate1 = Integer.parseInt(rate);
+        int rate1 = Integer.parseInt(rate);*/
         
         try {
             Connection connection = DriverManager.getConnection(
@@ -400,7 +401,7 @@ public class edit extends javax.swing.JFrame {
                 
 
                 if (code.equals(db_code)) {
-              query="DELETE FROM items WHERE code=" + code + "";
+              query="DELETE FROM items WHERE code='" + code + "'";
                statement.execute(query);
                showMessageDialog(null, "Deleted");
                 }else{
