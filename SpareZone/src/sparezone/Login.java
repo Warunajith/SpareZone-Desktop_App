@@ -225,8 +225,8 @@ public class Login extends javax.swing.JFrame {
 
                 if (Email.equals(db_email) && Password.equals(db_password)) {
                     this.dispose();
-                    Home home = new Home();
-                    home.setVisible(true);
+                    adminpanel admin = new adminpanel();
+                    admin.setVisible(true);
                 } else {
 
                     error_msg.setText("Incorrect E-Mail or Password");

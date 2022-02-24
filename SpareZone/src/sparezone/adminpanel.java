@@ -74,6 +74,11 @@ public class adminpanel extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(255, 153, 153));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setText("Logout");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         editbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sparezone/Images/Edit.png"))); // NOI18N
         editbtn.setText("jButton3");
@@ -210,6 +215,13 @@ public class adminpanel extends javax.swing.JFrame {
         edit btn4 = new edit();
         btn4.setVisible(true);
     }//GEN-LAST:event_editbtnActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        Login login = new Login();
+        login.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
  
 
 

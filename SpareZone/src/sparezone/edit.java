@@ -349,9 +349,7 @@ public class edit extends javax.swing.JFrame {
                 
 
                 if (code.equals(db_code)) {
-             // query=UPDATE `items` SET `name`=name,`price`=price,`des`=desc,`stock`=stock1,`rate`=rate1 WHERE code=code;
-             // query=UPDATE items SET ”+ “name='” + name + “‘,price='” + price + “‘,des='” + desc + “‘,stock='” + stock1 + “‘,rate='” + rate1 + “‘”+ “WHERE code='” + code + “‘;
-              // query=UPDATE items SET name='" + jTextField2.getText() + "',marks=" + jTextField3.getText() + " WHERE roll=" + jTextField1.getText() + "
+             
               query="UPDATE items SET name='" + name + "',price=" + price1 + ",des='" + desc + "',stock=" + stock1 + ",rate=" + rate + " WHERE code='" + code + "'";
               statement.execute(query); 
               showMessageDialog(null, "Updated");
